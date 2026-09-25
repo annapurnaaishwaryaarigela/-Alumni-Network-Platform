@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alumni Network | Alumni Management & Networking</title>
+
+    <meta
+        name="description"
+        content="Alumni Network platform for alumni directory, events, jobs, mentorship and fundraising."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo" onclick="showPage('home')">
+            <div class="logo-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div>
+                <strong>ALUMNI<span>NETWORK</span></strong>
+                <small>CONNECT • GROW • GIVE BACK</small>
+            </div>
+        </a>
+
+        <button class="mobile-menu" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+
+            <a href="#home" onclick="showPage('home')">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <div class="nav-dropdown">
+                <button class="dropdown-btn">
+                    <i class="fa-solid fa-users"></i>
+                    Alumni
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#directory" onclick="showPage('directory')">
+                        Alumni Directory
+                    </a>
+
+                    <a href="#profile" onclick="showPage('profile')">
+                        My Profile
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-dropdown">
+                <button class="dropdown-btn">
+                    <i class="fa-solid fa-calendar"></i>
+                    Programs
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#events" onclick="showPage('events')">
+                        Events
+                    </a>
+
+                    <a href="#mentorship" onclick="showPage('mentorship')">
+                        Mentorship
+                    </a>
+
+                    <a href="#fundraising" onclick="showPage('fundraising')">
+                        Fundraising
+                    </a>
+                </div>
+            </div>
+
+            <a href="#jobs" onclick="showPage('jobs')">
+                <i class="fa-solid fa-briefcase"></i> Jobs
+            </a>
+
+            <a href="#news" onclick="showPage('news')">
+                <i class="fa-solid fa-newspaper"></i> News
+            </a>
+
+            <a href="#admin" onclick="showPage('admin')">
+                <i class="fa-solid fa-chart-line"></i> Admin
+            </a>
+
+            <button class="theme-btn" onclick="toggleDarkMode()" title="Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="login-nav-btn" onclick="openAuth('login')">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="page active-page">
+
+    <div class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-users"></i>
+                CONNECT • GROW • GIVE BACK
+            </div>
+
+            <h1>
+                Your Alumni Community.
+                <span>Your Future.</span>
+            </h1>
+
+            <p>
+                Stay connected with your college community, discover
+                opportunities, find mentors, attend events and make an impact.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="btn primary-btn"
+                    onclick="showPage('directory')"
+                >
+                    <i class="fa-solid fa-users"></i>
+                    Explore Alumni
+                </button>
+
+                <button
+                    class="btn secondary-btn"
+                    onclick="showPage('events')"
+                >
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Explore Events
+                </button>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong id="heroAlumni">1200+</strong>
+                    <span>Alumni</span>
+                </div>
+
+                <div>
+                    <strong>25+</strong>
+                    <span>Events</span>
+                </div>
+
+                <div>
+                    <strong>50+</strong>
+                    <span>Mentors</span>
+                </div>
+
+                <div>
+                    <strong>₹10L+</strong>
+                    <span>Raised</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR COMMUNITY
+            </span>
+
+            <h2>
+                More Than a Network
+            </h2>
+
+            <p>
+                A place where alumni and students connect,
+                collaborate and create meaningful opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+
+                <h3>Alumni Directory</h3>
+
+                <p>
+                    Find alumni by batch, location, profession and
+                    build valuable professional connections.
+                </p>
+
+                <button onclick="showPage('directory')">
+                    Explore Directory →
+                </button>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h3>Events & Meetups</h3>
+
+                <p>
+                    Discover upcoming events, reunions,
+                    workshops and networking opportunities.
+                </p>
+
+                <button onclick="showPage('events')">
+                    View Events →
+                </button>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+
+                <h3>Mentorship</h3>
+
+                <p>
+                    Connect students with experienced alumni
+                    for career guidance and mentorship.
+                </p>
+
+                <button onclick="showPage('mentorship')">
+                    Find Mentors →
+                </button>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+
+                <h3>Give Back</h3>
+
+                <p>
+                    Support scholarships, student initiatives
+                    and community development campaigns.
+                </p>
+
+                <button onclick="showPage('fundraising')">
+                    Support Campaigns →
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUCCESS STORIES -->
+
+    <section class="section light-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                ALUMNI STORIES
+            </span>
+
+            <h2>
+                Inspiring Alumni
+            </h2>
+
+        </div>
+
+        <div class="story-grid">
+
+            <article class="story-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
+                    alt="Alumni professional"
+                >
+
+                <div class="story-content">
+
+                    <span>Class of 2015</span>
+
+                    <h3>Building Technology for Tomorrow</h3>
+
+                    <p>
+                        "The alumni community helped me discover
+                        opportunities that changed my career."
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="story-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+                    alt="Alumni professional"
+                >
+
+                <div class="story-content">
+
+                    <span>Class of 2018</span>
+
+                    <h3>From Student to Entrepreneur</h3>
+
+                    <p>
+                        "Mentorship from our alumni community
+                        gave me the confidence to build my company."
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="story-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80"
+                    alt="Professional team"
+                >
+
+                <div class="story-content">
+
+                    <span>Class of 2012</span>
+
+                    <h3>Giving Back to the Community</h3>
+
+                    <p>
+                        "Giving back is one of the most rewarding
+                        parts of staying connected."
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta-section">
+
+        <div>
+
+            <span class="section-label">STAY CONNECTED</span>
+
+            <h2>Your Alumni Journey Starts Here.</h2>
+
+            <p>
+                Join the network and discover your next opportunity.
+            </p>
+
+        </div>
+
+        <button
+            class="btn white-btn"
+            onclick="openAuth('register')"
+        >
+            Join Alumni Network
+        </button>
+
+    </section>
+
+</section>
+
+
+<!-- ================= DIRECTORY ================= -->
+
+<section id="directory" class="page">
+
+    <div class="page-header">
+
+        <div>
+            <span class="section-label">ALUMNI COMMUNITY</span>
+            <h1>Alumni Directory</h1>
+
+            <p>
+                Discover and connect with alumni from different
+                batches, locations and professions.
+            </p>
+        </div>
+
+        <button
+            class="btn primary-btn"
+            onclick="openAuth('register')"
+        >
+            <i class="fa-solid fa-user-plus"></i>
+            Join Network
+        </button>
+
+    </div>
+
+
+    <div class="filter-panel">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-search"></i>
+
+            <input
+                type="text"
+                id="alumniSearch"
+                placeholder="Search alumni by name, profession..."
+                oninput="filterAlumni()"
+            >
+
+        </div>
+
+
+        <select id="batchFilter" onchange="filterAlumni()">
+
+            <option value="">All Batches</option>
+            <option value="2010-2015">2010-2015</option>
+            <option value="2016-2020">2016-2020</option>
+            <option value="2021-2025">2021-2025</option>
+
+        </select>
+
+
+        <select id="locationFilter" onchange="filterAlumni()">
+
+            <option value="">All Locations</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Hyderabad">Hyderabad</option>
+
+        </select>
+
+
+        <select id="professionFilter" onchange="filterAlumni()">
+
+            <option value="">All Professions</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Data Scientist">Data Scientist</option>
+            <option value="Entrepreneur">Entrepreneur</option>
+            <option value="Academician">Academician</option>
+            <option value="Healthcare Professional">Healthcare Professional</option>
+
+        </select>
+
+    </div>
+
+
+    <div id="alumniGrid" class="alumni-grid"></div>
+
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+
+<section id="events" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">COMMUNITY ACTIVITIES</span>
+
+            <h1>Events & Meetups</h1>
+
+            <p>
+                Attend events, workshops, reunions and networking sessions.
+            </p>
+
+        </div>
+
+        <button class="btn primary-btn" onclick="openEventModal()">
+            <i class="fa-solid fa-plus"></i>
+            Create Event
+        </button>
+
+    </div>
+
+
+    <div class="event-grid" id="eventsGrid"></div>
+
+</section>
+
+
+<!-- ================= JOBS ================= -->
+
+<section id="jobs" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">CAREER OPPORTUNITIES</span>
+
+            <h1>Alumni Job Board</h1>
+
+            <p>
+                Find jobs and internships shared by the alumni community.
+            </p>
+
+        </div>
+
+        <button class="btn primary-btn" onclick="openJobModal()">
+            <i class="fa-solid fa-plus"></i>
+            Post a Job
+        </button>
+
+    </div>
+
+
+    <div class="job-grid" id="jobsGrid"></div>
+
+</section>
+
+
+<!-- ================= MENTORSHIP ================= -->
+
+<section id="mentorship" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">CAREER GUIDANCE</span>
+
+            <h1>Mentorship Program</h1>
+
+            <p>
+                Connect with experienced alumni and get guidance
+                for your career journey.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="mentor-intro">
+
+        <div>
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <h2>Learn From Experience</h2>
+
+            <p>
+                Our mentorship program connects students and young
+                professionals with experienced alumni.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="mentor-grid" id="mentorGrid"></div>
+
+</section>
+
+
+<!-- ================= FUNDRAISING ================= -->
+
+<section id="fundraising" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">MAKE AN IMPACT</span>
+
+            <h1>Fundraising Campaigns</h1>
+
+            <p>
+                Support meaningful initiatives and help create
+                opportunities for students.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="campaign-grid" id="campaignGrid"></div>
+
+</section>
+
+
+<!-- ================= PROFILE ================= -->
+
+<section id="profile" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">MY ACCOUNT</span>
+
+            <h1>Alumni Profile</h1>
+
+            <p>
+                Manage your personal, professional and educational information.
+            </p>
+
+        </div>
+
+        <button class="btn primary-btn" onclick="enableProfileEdit()">
+            <i class="fa-solid fa-pen"></i>
+            Edit Profile
+        </button>
+
+    </div>
+
+
+    <div class="profile-container">
+
+        <div class="profile-cover"></div>
+
+        <div class="profile-main">
+
+            <div class="profile-avatar">
+                <span>AS</span>
+            </div>
+
+            <div class="profile-title">
+
+                <h2 id="profileName">Aarav Sharma</h2>
+
+                <p>Software Engineer • Class of 2021</p>
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bangalore, India
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-form">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input id="profileNameInput" value="Aarav Sharma" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input value="aarav@example.com" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Profession</label>
+                <input value="Software Engineer" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Location</label>
+                <input value="Bangalore" disabled>
+            </div>
+
+            <div class="form-group full">
+                <label>Bio</label>
+
+                <textarea disabled>
+Passionate software engineer and alumni community volunteer interested in mentoring students and supporting technology initiatives.
+                </textarea>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="saveProfileBtn"
+            class="btn primary-btn hidden"
+            onclick="saveProfile()"
+        >
+            Save Changes
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ADMIN ================= -->
+
+<section id="admin" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">ADMINISTRATION</span>
+
+            <h1>Admin Dashboard</h1>
+
+            <p>
+                Monitor alumni, events, jobs and community activity.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-stats">
+
+        <div class="dashboard-card">
+            <i class="fa-solid fa-users"></i>
+            <span>Total Alumni</span>
+            <strong>1,248</strong>
+            <small>+12% this month</small>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Events</span>
+            <strong>26</strong>
+            <small>8 upcoming</small>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Job Posts</span>
+            <strong>84</strong>
+            <small>18 new this week</small>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span>Donations</span>
+            <strong>₹10.4L</strong>
+            <small>Across 8 campaigns</small>
+        </div>
+
+    </div>
+
+
+    <div class="admin-grid">
+
+        <div class="admin-panel">
+
+            <div class="panel-header">
+
+                <h3>Recent Registrations</h3>
+
+                <button onclick="showPage('directory')">
+                    View All
+                </button>
+
+            </div>
+
+            <div class="admin-table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Batch</th>
+                            <th>Profession</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Priya Reddy</td>
+                            <td>2021-2025</td>
+                            <td>Data Scientist</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Rahul Mehta</td>
+                            <td>2016-2020</td>
+                            <td>Entrepreneur</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Ananya Rao</td>
+                            <td>2021-2025</td>
+                            <td>Software Engineer</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-panel">
+
+            <div class="panel-header">
+
+                <h3>Quick Actions</h3>
+
+            </div>
+
+            <div class="quick-actions">
+
+                <button onclick="openEventModal()">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    Create Event
+                </button>
+
+                <button onclick="openJobModal()">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Post Job
+                </button>
+
+                <button onclick="showPage('fundraising')">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    Manage Campaigns
+                </button>
+
+                <button onclick="downloadReport()">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Download Report
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWS ================= -->
+
+<section id="news" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">LATEST UPDATES</span>
+
+            <h1>News & Announcements</h1>
+
+            <p>
+                Stay updated with alumni community announcements.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="news-grid">
+
+        <article class="news-card">
+
+            <span>September 18, 2026</span>
+
+            <h3>
+                Annual Alumni Meet Registration Opens
+            </h3>
+
+            <p>
+                Registration is now open for the annual alumni
+                gathering and networking evening.
+            </p>
+
+            <button onclick="showToast('Registration details opened!')">
+                Read More →
+            </button>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <span>September 12, 2026</span>
+
+            <h3>
+                New Mentorship Cohort Announced
+            </h3>
+
+            <p>
+                Experienced alumni are now accepting applications
+                from students looking for career guidance.
+            </p>
+
+            <button onclick="showToast('Mentorship announcement opened!')">
+                Read More →
+            </button>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <span>September 05, 2026</span>
+
+            <h3>
+                Scholarship Fund Reaches ₹5 Lakh
+            </h3>
+
+            <p>
+                The alumni scholarship campaign has reached an
+                important fundraising milestone.
+            </p>
+
+            <button onclick="showToast('Scholarship news opened!')">
+                Read More →
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery" class="page">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="section-label">COMMUNITY MEMORIES</span>
+
+            <h1>Photo Gallery</h1>
+
+            <p>
+                Memories from our alumni events and community activities.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <img
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80"
+            alt="Community gathering"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+            alt="Friends networking"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+            alt="Conference"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80"
+            alt="Event"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80"
+            alt="Business meeting"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+            alt="Team meeting"
+        >
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div>
+
+                <strong>ALUMNI<span>NETWORK</span></strong>
+
+                <p>
+                    Connecting alumni. Creating opportunities.
+                    Building communities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <h4>Explore</h4>
+
+                <a onclick="showPage('directory')">Alumni Directory</a>
+                <a onclick="showPage('events')">Events</a>
+                <a onclick="showPage('jobs')">Jobs</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Programs</h4>
+
+                <a onclick="showPage('mentorship')">Mentorship</a>
+                <a onclick="showPage('fundraising')">Fundraising</a>
+                <a onclick="showPage('news')">News</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Community</h4>
+
+                <a onclick="showPage('gallery')">Gallery</a>
+                <a onclick="showPage('profile')">My Profile</a>
+                <a onclick="openAuth('register')">Register</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Alumni Network. All rights reserved.
+        </p>
+
+        <p>
+            Free Web Development Internship Project
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= AUTH MODAL ================= -->
+
+<div id="authModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('authModal')">
+            ×
+        </button>
+
+        <div class="auth-header">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h2 id="authTitle">Welcome Back</h2>
+
+            <p id="authSubtitle">
+                Login to your alumni account.
+            </p>
+
+        </div>
+
+
+        <form id="authForm" onsubmit="handleAuth(event)">
+
+            <div
+                class="form-group"
+                id="nameField"
+            >
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="authName"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="authEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="authPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button class="btn primary-btn full-btn" type="submit">
+                Continue
+            </button>
+
+        </form>
+
+
+        <p class="auth-switch">
+
+            <span id="authSwitchText">
+                Don't have an account?
+            </span>
+
+            <button onclick="switchAuth()">
+                <span id="authSwitchBtn">Register</span>
+            </button>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= EVENT MODAL ================= -->
+
+<div id="eventModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('eventModal')">
+            ×
+        </button>
+
+        <h2>Create Event</h2>
+
+        <form onsubmit="createEvent(event)">
+
+            <div class="form-group">
+
+                <label>Event Name</label>
+
+                <input
+                    id="eventName"
+                    required
+                    placeholder="Example: Alumni Meetup 2026"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Date</label>
+
+                <input
+                    id="eventDate"
+                    type="date"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Location</label>
+
+                <input
+                    id="eventLocation"
+                    required
+                    placeholder="Event location"
+                >
+
+            </div>
+
+
+            <button class="btn primary-btn full-btn">
+                Create Event
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JOB MODAL ================= -->
+
+<div id="jobModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal('jobModal')">
+            ×
+        </button>
+
+        <h2>Post a Job</h2>
+
+        <form onsubmit="createJob(event)">
+
+            <div class="form-group">
+
+                <label>Job Title</label>
+
+                <input
+                    id="jobTitle"
+                    required
+                    placeholder="Software Engineer"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Company</label>
+
+                <input
+                    id="jobCompany"
+                    required
+                    placeholder="Company name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Location</label>
+
+                <input
+                    id="jobLocation"
+                    required
+                    placeholder="Bangalore / Remote"
+                >
+
+            </div>
+
+
+            <button class="btn primary-btn full-btn">
+                Publish Job
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast" class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Successfully completed!
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
